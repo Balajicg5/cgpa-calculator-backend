@@ -25,6 +25,9 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/semesters', semesterRoutes);
+app.get('/api/test', (req, res) => {
+  res.send('✅ Backend is working');
+});
 
 
 app.use(errorMiddleware)
